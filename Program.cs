@@ -1,2 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+
+using advent_of_code_2025.dayone;
+
+var solver = new DayOne();
+
+solver.SolvePartTwo();
