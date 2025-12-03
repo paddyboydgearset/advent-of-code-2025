@@ -5,3 +5,5 @@ using advent_of_code_2025.dayone;
 var solver = new DayThree();
 
 solver.SolvePartOne();
+
+solver.SolvePartTwo();

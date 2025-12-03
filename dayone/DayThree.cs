@@ -16,24 +16,14 @@ public class DayThree
     
     public void SolvePartOne()
     {
-        long maxAmount = 0;
-        
-        foreach (var lineArray in GetLines())
-        {
-            maxAmount += FindMax(lineArray, 2);
-        }
+        long maxAmount = GetLines().Sum(l => FindMax(l, 2));
         
         Console.WriteLine($"Max joltage: {maxAmount}");
     }
     
     public void SolvePartTwo()
     {
-        long maxAmount = 0;
-        
-        foreach (var lineArray in GetLines())
-        {
-            maxAmount += FindMax(lineArray, 12);
-        }
+        long maxAmount = GetLines().Sum(l => FindMax(l, 12));
         
         Console.WriteLine($"Max joltage: {maxAmount}");
     }
