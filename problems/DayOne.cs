@@ -1,6 +1,6 @@
 using advent_of_code_2025.Loader;
 
-namespace advent_of_code_2025.dayone;
+namespace advent_of_code_2025.problems;
 
 public class DayOne
 {
