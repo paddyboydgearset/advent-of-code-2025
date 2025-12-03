@@ -20,7 +20,7 @@ public class DayThree
         
         foreach (var lineArray in GetLines())
         {
-            maxAmount += FindMax(lineArray);
+            maxAmount += FindMax(lineArray, 2);
         }
         
         Console.WriteLine($"Max joltage: {maxAmount}");
@@ -37,27 +37,7 @@ public class DayThree
         
         Console.WriteLine($"Max joltage: {maxAmount}");
     }
-
-    private long FindMax(long[] digits)
-    {
-        List<long> excludeFromMax = [];
-
-        while (excludeFromMax.Count < 9)
-        {
-            var maxDigit = digits.Except(excludeFromMax).Max();
-            var firstIndex = Array.IndexOf(digits, maxDigit);
-            if (firstIndex != digits.Length - 1)
-            {
-                var maxNext = digits.Skip(firstIndex + 1).Max();
-                return Int64.Parse($"{maxDigit}{maxNext}");
-            }
-
-            excludeFromMax.Add(maxDigit);
-        }
-
-        return 0;
-    }
-    
+  
     private long FindMax(long[] digits, int finalDigitCount)
     {
         List<long> excludeFromMax = [];
