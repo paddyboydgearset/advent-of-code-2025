@@ -2,7 +2,7 @@
 
 using advent_of_code_2025.problems;
 
-var solver = new DayThree();
+var solver = new DayFour();
 
 solver.SolvePartOne();
 

@@ -44,7 +44,7 @@ public static class InputLoader
     {
         var assembly = Assembly.GetExecutingAssembly();
         
-        using var stream = assembly.GetManifestResourceStream("advent_of_code_2025.Inputs." + resourceName);
+        using var stream = assembly.GetManifestResourceStream("advent_of_code_2025.inputs." + resourceName);
         
         if (stream == null)
             throw new FileNotFoundException($"Resource '{resourceName}' not found.");
